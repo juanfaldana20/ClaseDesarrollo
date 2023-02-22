@@ -3,7 +3,7 @@ import { AddCategory } from "./AddCategory";
 import { GifGrid } from "./GiftGrid";
 
 
-const defaultValue = ['Tengo FE', 'Santo graial']
+const defaultValue = [ ]
 
 
 export const ComponentApp = () => {

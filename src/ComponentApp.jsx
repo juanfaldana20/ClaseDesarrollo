@@ -24,7 +24,7 @@ const addCategory = (cualquiera) =>{
 
     return(
         <>
-            <h1>Canciones</h1>
+            <h1>Buscador de gifs</h1>
             <AddCategory onAddCategory={addCategory}/>
             <ol>
                  {

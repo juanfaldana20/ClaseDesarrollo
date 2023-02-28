@@ -1,9 +1,10 @@
 import { useState } from "react"
 import { useEffect } from "react"
 import GifItem from './GifItem'
+import './index.css'
 
 
-const getGifs = async (category) => {
+ export const getGifs = async (category) => {
     console.log(category)
     const url = `https://api.giphy.com/v1/gifs/search?api_key=bHLmzL9XZKwPFZ8SaMiLA78jsJTJV8fI&q=${category}&limit=25&offset=0&rating=g&lang=en`
     const resp = await fetch(url)
@@ -26,8 +27,8 @@ export const GifGrid = ({ category }) => {
 
 
     const InvoGifs = async() => {
-        const variablegifs =await getGifs(category)
-        Setimages(variablegifs)
+        const images =await getGifs(category)
+        Setimages(images)
         
     }
     useEffect(()=> {
@@ -47,3 +48,4 @@ export const GifGrid = ({ category }) => {
         </>
     )
 }
+export default GifGrid

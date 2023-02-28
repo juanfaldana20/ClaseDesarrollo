@@ -1,19 +1,24 @@
+import { useState } from "react"
+import { AddCategory } from "./AddCategory";
+import { GifGrid } from "./GiftGrid";
 
-import React from 'react';
-import useCounter from './useCounter';
 
-const ComponentApp=()=> {
-  const { count, increment, decrement, reset } = useCounter();
+const defaultValue = []
 
-  return (
-    <div>
-        <h1>Challenge counter </h1>
-      <p>Count: {count}</p>
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decrement</button>
-      <button onClick={reset}>Reset</button>
-    </div>
-  );
+
+export const ComponentApp = () => {
+const [categories, setCategories] = useState (defaultValue);
+
+
+
+
+const addCategory = (cualquiera) =>{
+   
+    const auxCategories = [ ...categories ]
+    auxCategories.push(cualquiera)
+    setCategories(auxCategories)
+
+
 }
 
 
@@ -34,3 +39,4 @@ const ComponentApp=()=> {
         </>
     )
 }
+export default ComponentApp
